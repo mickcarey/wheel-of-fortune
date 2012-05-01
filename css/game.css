@@ -1,0 +1,243 @@
+body {
+	background: black;
+}
+#game {
+	width: 1024px;
+	height: 768px;
+	background: black;
+	position: relative;
+	overflow: hidden;
+	background: url(../img/game-bg.jpg) no-repeat center top;
+	margin: 0 auto;
+}
+
+.player {
+	width: 300px;
+	height: 95px;
+	position: absolute;
+}
+
+#players .active {
+	border-top: 2px solid white;
+}
+
+.player .player-name,
+.player .player-score {
+	text-align: center;
+	color: white;
+	text-shadow: 1px 1px 1px black;
+}
+
+.player-name {
+	font-size: 24px;
+	padding-top: 10px;
+}
+
+.player-score {
+	font-size: 36px;
+}
+
+#player-1 {
+	background: url(../img/player-1.png) no-repeat;
+	left: 20px;
+}
+
+#player-2 {
+	background: url(../img/player-2.png) no-repeat;
+	left: 50%;
+	margin-left: -150px;
+}
+
+#player-3 {
+	background: url(../img/player-3.png) no-repeat;
+	right: 20px;
+}
+
+#letter-board {
+	position: absolute;
+	top: 155px;
+	width: 943px;
+	height: 389px;
+	background: url(../img/game-board.png) no-repeat;
+	left: 50%;
+	margin-left: -471.5px;
+}
+
+#board-area {
+	position: absolute;
+	height: 322px;
+	width: 891px;
+	top: 50%;
+	left: 50%;
+	margin-top: -161px;
+	margin-left: -445.5px;
+}
+
+.cell {
+	position: absolute;
+	height: 63px;
+	width: 45px;
+	border: 7px solid black;
+	background: #021f06;
+	background: -moz-linear-gradient(top,  #021f06 0%, #0b6618 51%, #021f06 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#021f06), color-stop(51%,#0b6618), color-stop(100%,#021f06));
+	background: -webkit-linear-gradient(top,  #021f06 0%,#0b6618 51%,#021f06 100%);
+	background: -o-linear-gradient(top,  #021f06 0%,#0b6618 51%,#021f06 100%);
+	background: -ms-linear-gradient(top,  #021f06 0%,#0b6618 51%,#021f06 100%);
+	background: linear-gradient(top,  #021f06 0%,#0b6618 51%,#021f06 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#021f06', endColorstr='#021f06',GradientType=0 );
+	color: transparent;
+	font-size: 40px;
+	text-align: center;
+	line-height: 62px;
+	text-transform: uppercase;
+}
+
+.cell-hide {
+	background: white;
+	color: white;
+}
+
+.cell-reveal {
+	background: white;
+	color: black;
+}
+
+.r1 {
+	top: 0;
+}
+
+.r2 {
+	top: 82px;
+}
+
+.r3 {
+	top: 164px;
+}
+
+.r4 {
+	top: 246px;	
+}
+
+.c1 {
+	left: 0;
+}
+
+.c2 {
+	left: 64px;
+}
+
+.c3 {
+	left: 128px;
+}
+
+.c4 {
+	left: 192px;
+}
+
+.c5 {
+	left: 256px;
+}
+
+.c6 {
+	left: 320px;
+}
+
+.c7 {
+	left: 384px;	
+}
+
+.c8 {
+	left: 448px;	
+}
+
+.c9 {
+	left: 512px;
+}
+
+.c10 {
+	left: 576px;
+}
+
+.c11 {
+	left: 640px;	
+}
+
+.c12 {
+	left: 704px;	
+}
+
+.c13 {
+	left: 768px;
+}
+
+.c14 {
+	left: 832px;
+}
+
+#cell-1, #cell-14, #cell-43, #cell-56 {
+	display: none;
+}
+
+#clue {
+	position: absolute;
+	height: 64px;
+	width: 1024px;
+	bottom: 128px;
+	background: url(../img/clue.png) no-repeat;	
+	text-align: center;
+}
+
+#clue-text {
+	color: white;
+	margin: 0;
+	padding: 0;
+	line-height: 64px;
+	text-transform: uppercase;
+}
+
+#letter-choices {
+	position: absolute;
+	height: 131px;
+	bottom: 0;
+	width: 1024px;
+	background: url(../img/letter-choices.png) repeat-x;	
+}
+
+#letters-container {
+	position: absolute;
+	width: 912px;
+	height: 104px;
+	background: url(../img/letter-container.png) no-repeat center;
+	left: 50%;
+	margin-left: -456px;	
+	padding-top: 3px;
+
+}
+
+.letter, .letter-used {
+	float: left;
+	font-size: 38px;
+	text-transform: uppercase;
+	color: white;
+	padding: 0 4px;
+	text-shadow: 2px 2px 5px black;
+	line-height: 90px;
+}
+.letter:hover {
+	font-size: 52px;
+	cursor: pointer;
+}
+#letter-a {
+	margin-left: 15px;
+}
+.letter-used {
+	color: #c99456;
+}
+#end-screen {
+	background: black;
+	position: absolute;
+	width: 1024px;
+	height: 600px;
+	display: none;
+}
