@@ -2,6 +2,7 @@
 	"name": "wheel-of-fortune",
 	"version": "0.0.1",
 	"dependencies": {
-		"socket.io": "0.8.5"
+		"node-static": "^0.7.11",
+		"socket.io": "^4.1.2"
 	}
 }

@@ -1,22 +1,21 @@
 var app = require('http').createServer(handler), 
-	io = require('socket.io').listen(app), 
-	fs = require('fs');
+	io = require('socket.io')(app), 
+	fs = require('fs'),
+  static = require('node-static');
 
-app.listen(8081);
+var PORT = 80;
 var players = [];
 var lettersUsed = [];
 
-function handler (req, res) {
-  fs.readFile(__dirname + '/index.html',
-  function (err, data) {
-    if (err) {
-      res.writeHead(500);
-      return res.end('Error loading index.html');
-    }
+var file = new(static.Server)(__dirname);
 
-    res.writeHead(200);
-    res.end(data);
-  });
+app.listen(PORT, () => {
+  console.log(`Server started on port ${PORT}`);
+});
+
+function handler (req, res) {
+  console.log('serve');
+  file.serve(req,res);
 }
 
 io.sockets.on('connection', function (socket) {

@@ -3,7 +3,7 @@ $(document).ready(function() {
 	/****************************** 
 	 * Global Variables 
 	 *****************************/
-	var socket = io.connect("http://192.168.2.3:8081");
+	var socket = io.connect(window.location.host);
 	var games;
 	var clues;
 	var lettersToReveal;
@@ -91,8 +91,7 @@ $(document).ready(function() {
 	function newGame() {
 		$("#end-screen").hide();
 		resetBoard();
-//		loadGame(prompt('Enter game id'));
-		loadGame(0);
+		loadGame(prompt('Enter game id'));
 		activePlayer = 1;
 		selectPlayer(activePlayer);
 	}
