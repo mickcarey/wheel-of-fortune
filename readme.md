@@ -7,4 +7,4 @@ The game play in this state is fragmented, but some elements work.
 
 ### To Run
 
-Run `node app.js` to launch to server.
+`npm install` then `node app.js` to launch the server (configed to port 80).
