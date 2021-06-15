@@ -3,7 +3,7 @@ var app = require('http').createServer(handler),
 	fs = require('fs'),
   static = require('node-static');
 
-var PORT = 80;
+var PORT = process.env.PORT;
 var players = [];
 var lettersUsed = [];
 
