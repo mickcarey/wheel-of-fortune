@@ -1,5 +1,8 @@
 # Wheel of Fortune
 
+[Game running on Heroku](https://wheel-of-fortune.herokuapp.com/)
+- Only game id's from 1-4.
+
 A small game project for my Brother-in-Law from back in 2012, experimenting with a web sockets, multiple devices (Web + iPad) and lasting marriages :).
 
 Unfortuntely this isn't the final version we used and I cannot find that final codebase anywhere :(
