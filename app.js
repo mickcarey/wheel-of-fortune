@@ -14,7 +14,6 @@ app.listen(PORT, () => {
 });
 
 function handler (req, res) {
-  console.log('serve');
   file.serve(req,res);
 }
 
